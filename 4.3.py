@@ -24,3 +24,8 @@ for i in range(-10,-100,-30):
 a = ['Mary', 'had', 'a', 'little', 'lamb']
 for i in range(len(a)):
     print(i,a[i])
+
+# 反復可能体からリストを生成するlist()関数
+# x = list(range(5))
+for i in list(range(5)):
+    print(i)
