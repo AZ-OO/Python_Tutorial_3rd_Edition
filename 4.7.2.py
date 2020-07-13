@@ -20,10 +20,10 @@ def parrot(voltage, state = 'a stiff', action = 'voom', type = 'Norwegian Blue')
 # 関数をコールする時は、必ず位置引数が先でキーワード引数を後にしなければなｒない
 # キーワード引数は全て関数定義の仮引数に書いたものと一致している必要があるが、その順序は問われない
 
-parrot()                      # 必要な引数がない
-parrot(voltage = 5.0, 'dead') # キーワード引数の後に非キーワード引数
-parrot(110,voltage = 200)     # 同じ引数に値を2度与えた
-parrot(actor = 'John Cleese') # 未知のキーワード引数
+#parrot()                      # 必要な引数がない
+#parrot(voltage = 5.0, 'dead') # キーワード引数の後に非キーワード引数
+#parrot(110,voltage = 200)     # 同じ引数に値を2度与えた
+#parrot(actor = 'John Cleese') # 未知のキーワード引数
 
 # 仮引数の最後が**名前の形になっていると、この引数はディクショナリを受け取る
 # このディクショナリには、仮引数に対応するキーワードを除いたすべてのキーワード引数が入っている
@@ -32,3 +32,17 @@ parrot(actor = 'John Cleese') # 未知のキーワード引数
 # この形式では、仮引数にない位置指定型引数を全て含んだタプルが関数に渡る
 
 def chessshop(kind, * arguments, **keywords):
+    print('-- Do you have any', kind, '?')
+    print("-- I'm sorry, we're all out of", kind)
+    for arg in arguments:
+        print(arg)
+    print('-' * 40)
+    keys = sorted(keywords.keys())
+    for kw in keys:
+        print(kw,':', keywords[kw])
+
+chessshop("Limburger", "It's very runny sir.",
+         "It's really very, VERY runny, sir.",
+         shopkeeper = "Mihael Palin",
+         client = 'John Cleese',
+         sketch = 'Cheese SHop Sketch')
