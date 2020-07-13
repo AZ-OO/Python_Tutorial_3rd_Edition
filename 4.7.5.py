@@ -9,6 +9,7 @@ def make_incremenor(n):
 f = make_incremenor(42)
 print(f)
 f(0)
+f(1)
 
 # 用途としては、小さな関数を引数として渡すことができる
 pairs = [(1,'one'), (2, 'two'), (3, 'three'), (4, 'four')]
