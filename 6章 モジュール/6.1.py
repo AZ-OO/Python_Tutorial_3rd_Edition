@@ -4,5 +4,10 @@
 
 # ファイルに定義を仕込んでスクリプトや対話セッションをもつ。このファイルをモジュールといいう
 # モジュールとは、Pythonの定義や文がはいったファイルである
-import fibo
+import fibo # モジュールをインポート
 print(fibo.fib(1000))
+
+print(fibo.fib2(100))
+
+fib = fibo.fib # 関数を変数に代入
+print(fib(500))
