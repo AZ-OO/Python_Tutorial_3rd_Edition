@@ -1,7 +1,7 @@
 def fib(n): # nまでのフィボナッチ級数を書き出す
     a, b = 0, 1
     while b < n:
-        print(b end = ' ')
+        print(b, end = ' ')
         a, b = b, a + b
     print()
 
