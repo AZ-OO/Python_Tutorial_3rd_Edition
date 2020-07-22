@@ -19,5 +19,3 @@ print(fib(300))
 
 from fibo import *
 print(fib(400))
-
-
