@@ -9,5 +9,15 @@ print(fibo.fib(1000))
 
 print(fibo.fib2(100))
 
-fib = fibo.fib # 関数を変数に代入
+print(fibo.__name__)
+
+fib = fibo.fib # 関数をローカル変数に代入
 print(fib(500))
+
+from fibo import fib, fib2
+print(fib(300))
+
+from fibo import *
+print(fib(400))
+
+
