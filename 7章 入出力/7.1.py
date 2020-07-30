@@ -42,6 +42,6 @@ for x in range(1, 11):
     print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
 
 # str.zfill()メソッドで、数字の文字列の左側をゼロパディングする
-print('12'.zfill(5))
-print('-3.14'.zfill(7))
-print('3.14159265359'.zfill(5))
+print('12'.zfill(5))            # <-- 00012
+print('-3.14'.zfill(7))         # <-- -003.14
+print('3.14159265359'.zfill(5)) # <-- 3.14159265359
