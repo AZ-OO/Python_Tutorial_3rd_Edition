@@ -58,3 +58,22 @@ print('{1} and {0}'.format('spam', 'eggs'))
 # str.format()メソッドで、キーワードを引数に鳥、参照にこのキーワードを使うことができる
 print('This {food} is {Adjective}.'.format(food = 'spam', Adjective = 'Absolutely horrible'))
 
+# 位置引数とキーワード引数は自由に混在できる
+print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred', other = 'Georg'))
+
+# 『！a』(ascii()を適用)、『！s』(str()を適用)、『！r』(rept()を適用)を使えばフォーマット前に値の変換ができる
+import math
+print('The value of PI is approximately {}.'.format(math.pi))
+print('The value of PI is approximately {!r}.'.format(math.pi))
+
+# フィールドの後ろには、『:』とそれに続くフォーマット指定子をついあkすることもできる
+# これにより値のフォーマットは更にコントロールしやすくなる
+
+# πを小数点以下3文字に丸める
+print('πの値はおよそ{0:.3f}である。'.format(math.pi))
+
+# 『:』の後に整数を渡せばフィールドの文字数の最小幅が指定できる
+# これは、表を綺麗に仕上げるのに役立つ
+table = {'Sjoerd':4127, 'Jack':4098, 'Dcab':7678}
+for name, phone in table.items():
+    print('{0:10} ==> {1:10d}'.format(name, phone))
