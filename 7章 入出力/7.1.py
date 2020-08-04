@@ -77,3 +77,15 @@ print('πの値はおよそ{0:.3f}である。'.format(math.pi))
 table = {'Sjoerd':4127, 'Jack':4098, 'Dcab':7678}
 for name, phone in table.items():
     print('{0:10} ==> {1:10d}'.format(name, phone))
+
+# 非常に長い分割したくないフォーマット文字列があるんら、変数は位置ではなく名前で参照できたほうが嬉しい
+# これはdictを渡してアクセスキーに角カッコ([])を使うだけで可能
+table = {'Sjoerd': 4127, 'jack':4098, 'Dcab':8637678}
+print('jack:{0[jack]:d}; Sjoerd:{0[Sjoerd]:d}; '
+      'Dcab:{0[Dcab]:d}'.format(table))
+
+# tableを**表記を使ってキーワード引数として渡しても同じことができる
+table = {'Sjoerd': 4127, 'jack':4098, 'Dcab':8637678}
+print('jack:{jack:d}; Sjoerd:{Sjoerd:d}; '
+      'Dcab:{Dcab:d}'.format(**table))
+
