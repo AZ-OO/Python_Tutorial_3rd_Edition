@@ -45,3 +45,13 @@ for x in range(1, 11):
 print('12'.zfill(5))            # <-- 00012
 print('-3.14'.zfill(7))         # <-- -003.14
 print('3.14159265359'.zfill(5)) # <-- 3.14159265359
+
+# str.format
+# 中【】とその中の文字(これらをフォーマットフィールドという)は、
+# str.format()メソッドに渡されたオブジェクトで置き換えられる。
+# 中カッコの中には、str.formt()メソッドに渡されたオブジェクトの位置を参照する数字を入れる事もできる。
+print('We are the {} who say "{}!"'.format('knights', 'Ni'))
+
+print('{0} and {1}'.format('spam', 'eggs'))
+print('{1} and {0}'.format('spam', 'eggs'))
+
