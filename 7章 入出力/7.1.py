@@ -89,3 +89,7 @@ table = {'Sjoerd': 4127, 'jack':4098, 'Dcab':8637678}
 print('jack:{jack:d}; Sjoerd:{Sjoerd:d}; '
       'Dcab:{Dcab:d}'.format(**table))
 
+# 文字列のフォーマッティングには、%演算子を使うこともできる
+# これはsprintf()で使われるのとほぼ同じ形式をとった左辺引数を解釈し、
+# 右辺引数に適用する
+print(('πの値はおよそ%5.3fである。' % math.pi))
