@@ -55,3 +55,6 @@ print('We are the {} who say "{}!"'.format('knights', 'Ni'))
 print('{0} and {1}'.format('spam', 'eggs'))
 print('{1} and {0}'.format('spam', 'eggs'))
 
+# str.format()メソッドで、キーワードを引数に鳥、参照にこのキーワードを使うことができる
+print('This {food} is {Adjective}.'.format(food = 'spam', Adjective = 'Absolutely horrible'))
+
